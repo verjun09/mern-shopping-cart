@@ -1,9 +1,10 @@
 import './SideDrawer.css';
 import { Link } from 'react-router-dom';
 
-const SideDrawer = ({show, click}) => {
+const SideDrawer = ({show}) => {
     const sideDrawerClass = ['sideDrawer'];
 
+    console.log(show)
     if(show) {
         sideDrawerClass.push("show");
     }
@@ -13,7 +14,7 @@ const SideDrawer = ({show, click}) => {
             <li>
                 <Link to="/cart">
                     <i className="fas fa-shopping-cart"></i>
-                    <span>Cart <span className="sideDrawer__cartBadge"></span></span>
+                    <span>Cart <span className="sideDrawer__cartBadge">0</span></span>
                 </Link>
             </li>
             <li>
