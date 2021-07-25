@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Pages
-import Home from "./pages/Home/Home";
-import Product from "./pages/Product/Product";
-import Cart from "./pages/Cart/Cart";
+import HomePage from "./pages/Home/HomePage";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import CartPage from "./pages/Cart/CartPage";
 
 //Components
 import Navbar from './components/Navbar/Navbar';
@@ -19,14 +19,14 @@ function App() {
   return (
     <Router>
       <Navbar click={ () => setSideToggle(true) } />
-      <SideDrawer show={ sideToggle } />
-      <Backdrop show={ sideToggle } click={ () => setSideToggle(false) }/>
+      <SideDrawer show={ sideToggle } click={ () => setSideToggle(false) } />
+      <Backdrop show={ sideToggle } click={ () => setSideToggle(false) } />
       
       <main>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/product/:id" component={Product} />
-          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/product/:id" component={ProductPage} />
+          <Route exact path="/cart" component={CartPage} />
         </Switch>
       </main>
     </Router>

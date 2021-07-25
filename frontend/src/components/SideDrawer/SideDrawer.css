@@ -75,3 +75,9 @@
     color: #000;
 }
 
+@media (min-width: 960px) {
+    .sideDrawer {
+        display: none;;
+    }
+}
+
